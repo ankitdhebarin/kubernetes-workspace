@@ -15,7 +15,8 @@ metadata:
     alb.ingress.kubernetes.io/unhealthy-threshold-count: '2'
     # SSL Settings
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80}, {"HTTPS": 443}]'
-    alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:160470652083:certificate/8d40ba2d-1cba-42b8-88c0-e2acb4c29c99
+    # SSL Discovery should not need Certificate ARN
+    #alb.ingress.kubernetes.io/certificate-arn: arn:aws:acm:us-east-1:160470652083:certificate/8d40ba2d-1cba-42b8-88c0-e2acb4c29c99
 
 spec:
   ingressClassName: my-aws-ingress-class
